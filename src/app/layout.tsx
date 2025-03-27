@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,14 @@ export default function RootLayout({
         <nav className="bg-gray-900 text-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
-              <div className="text-xl font-bold">Tekoälykoulutus</div>
+              <Link href="/" className="text-xl font-bold hover:text-blue-400 transition duration-300">
+                Tekoälykoulutus
+              </Link>
               <div className="hidden md:flex space-x-8">
-                <a href="#" className="hover:text-blue-400 transition duration-300">Etusivu</a>
-                <a href="#" className="hover:text-blue-400 transition duration-300">Kurssit</a>
-                <a href="#" className="hover:text-blue-400 transition duration-300">Tietoa</a>
-                <a href="#" className="hover:text-blue-400 transition duration-300">Yhteystiedot</a>
+                <Link href="/" className="hover:text-blue-400 transition duration-300">Etusivu</Link>
+                <Link href="/kurssit" className="hover:text-blue-400 transition duration-300">Kurssit</Link>
+                <Link href="#" className="hover:text-blue-400 transition duration-300">Tietoa</Link>
+                <Link href="#" className="hover:text-blue-400 transition duration-300">Yhteystiedot</Link>
               </div>
             </div>
           </div>

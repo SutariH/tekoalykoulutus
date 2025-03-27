@@ -1,3 +1,5 @@
+import GlobalCTA from '@/components/GlobalCTA';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
@@ -37,16 +39,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Valmiina aloittamaan?</h2>
-          <p className="text-xl mb-8 text-blue-100">Liity joukkoomme ja ota ensimmäinen askel kohti tekoälyosaamista</p>
-          <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
-            Ilmoittaudu nyt
-          </button>
-        </div>
-      </section>
+      {/* Global CTA Section */}
+      <div className="container mx-auto px-4">
+        <GlobalCTA />
+      </div>
     </main>
   );
 }
